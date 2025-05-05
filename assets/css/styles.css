@@ -117,6 +117,13 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
 }
+section {
+  overflow-x: hidden;
+}
+
+form {
+  overflow-x: hidden;
+}
 
 h1, h2, h3, h4 {
   color: var(--title-color);
