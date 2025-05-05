@@ -218,41 +218,37 @@ themeButton.addEventListener('click', () => {
 })
 
 
-document.getElementById("submitButton").addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
-    document.querySelector("form").submit(); // Submits the form
-});
-
 const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Convert form data to a JSON object
-    const formData = new FormData(e.target);
-    const formObject = Object.fromEntries(formData.entries());
+  const form = e.target;
+  const formData = new FormData(form);
+  const formObject = Object.fromEntries(formData.entries());
 
-    try {
-        const response = await fetch("https://formspree.io/f/xrbeyopg", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",  
-            "Accept": "application/json",
-        },
-        body: JSON.stringify(formObject), 
+  try {
+    const response = await fetch("https://formspree.io/f/mvonabpr", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",  
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(formObject), 
     });
 
     if (response.ok) {
-        alert("Message sent successfully!");
-        e.target.reset(); 
+      alert("Message sent successfully!");
+      form.reset(); // ✅ Clears all fields
     } else {
-        alert("Failed to send message. Please check your input.");
+      alert("Failed to send message. Please check your input.");
     }
-        } catch (error) {
+  } catch (error) {
     console.error("Error sending message:", error);
     alert("An error occurred. Please try again.");
-    }
+  }
 };
 
 document.querySelector(".contact__form").addEventListener("submit", handleSubmit);
+
 
 //ABOUT SECTION
 document.addEventListener("DOMContentLoaded", () => {
