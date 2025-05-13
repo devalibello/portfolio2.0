@@ -527,6 +527,33 @@ img {
 .skills__flutter{
   width: 85%;
 }
+.skills__git{
+  width: 95%;
+}
+.skills__github{
+  width: 95%;
+}
+.skills__gitflow{
+  width: 95%;
+}
+.skills__gitlab{
+  width: 90%;
+}
+.skills__jira{
+  width: 90%;
+}
+.skills__leadership{
+  width: 95%;
+}
+.skills__teamplayer{
+  width: 95%;
+}
+.skills__adaptability{
+  width: 95%;
+}
+.skills__comunication{
+  width: 95%;
+}
 
 .skills__close .skills__list{
   height: 0;
